@@ -65,4 +65,41 @@ Playlist do youtube:
    - Cria um nome para o Emulador
      - Ex. Pixel_3a_Android_10
    - Inicia o Emulador
+
+## Robot Framework And Appium - Open Application - AppiumLibrary
+
+1. Documentação de Keyword
+    - [Link](https://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html)
      
+2. Criar um projeto
+   - File > New Project
+3. Criar algumas pastas:
+   - "Tests"
+   - "Resources"
+   - "Output"
+   - "Data"
+4. Criar arquivo "Open_application.robot"
+
+5. Verificar qual porta está configurado o Appium
+    ```bash
+        appium
+        appium --port
+    ```
+6. Verificar qual o dispositivo físico:
+    ```bash
+      adb devices
+      adb kill-server
+      adb start-server
+    ```
+7. Abrir Aplicativo: 
+    ```robot
+       Open Application	http://localhost:4723/wd/hub	platformName=Android    deviceName=emulator-5554
+       ...                 appPackage=chat21.android.demo	appActivity=chat21.android.demo.SplashActivity  automationName=Uiautomator2
+    ```
+8. Executar Robot:   
+   ```robot
+        robot -d robotframework\Output --loglevel TRACE robotframework\Tests\Open_Application.robot       
+    ```
+   
+9. Verificar os logs e relatórios
+> Log:     C:\Users\Miza\PycharmProjects\automation\Output\log.html
