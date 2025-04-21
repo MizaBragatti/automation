@@ -1,2 +1,0 @@
-# automation
-Automação de mobile
