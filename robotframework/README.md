@@ -45,3 +45,24 @@ Playlist do youtube:
    ```bash
    pip list 
    ```
+   
+## Robot Framework And Appium - Configure Devices And Emulators
+
+1. Conectar o Dispositivo físico
+   - Executar o comando para verificar se conectou  
+    ```bash
+     adb devices  
+    ```
+2. Baixar um programa para espelhar a tela do celular
+   - [Vysor](https://www.vysor.io/) 
+   - [scrcopy](https://github.com/Genymobile/scrcpy)
+
+3. Criar um Emulador
+   - Criar no Device Manager
+     - Ex. Pixel 3a | 5.6" | 1080x2220 | 440dpi
+   - Escolher Imagem do Sistema
+     - Ex. Q | 29 | x86 | Android 10.0 (Google Play)
+   - Cria um nome para o Emulador
+     - Ex. Pixel_3a_Android_10
+   - Inicia o Emulador
+     
